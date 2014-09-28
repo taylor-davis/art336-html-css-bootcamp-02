@@ -14,3 +14,42 @@ Globals
     font-size: $size;
     font-size: calculateRem($size);
 }
+
+@font-face {
+  font-family: 'Tinos';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Tinos'), url(http://fonts.gstatic.com/s/tinos/v8/qW9BXJSxuiY61gVJGeMDeaCWcynf_cDxXwCLxiixG1c.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Tinos';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Tinos Bold'), local('Tinos-Bold'), url(http://fonts.gstatic.com/s/tinos/v8/r7ygpzWtF3nxLEGd26jZfnYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Playfair Display SC';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Playfair Display SC Black'), local('PlayfairDisplaySC-Black'), url(http://fonts.gstatic.com/s/playfairdisplaysc/v4/5ggqGkvWJU_TtW2W8cEubBV54fkn2nYJkwJTw9VVxr_r7w4p9aSvGirXi6XmeXNA.woff) format('woff');
+}
+
+@mixin body-font-regular {
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin body-font-bold {
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin headline-font {
+    font-family: 'Playfair Display SC';
+    font-style: normal;
+    font-weight: 900;
+}

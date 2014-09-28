@@ -2,3 +2,99 @@
 Base Rules
 	A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudoclasses. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
 */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;   
+}
+
+body {
+    background-color: #f0b1b1;
+    border-style: double;
+    border-width: thick;
+    @include body-font-regular;
+    @include fontSize(15px);
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 550px;
+    padding: 10px;
+    width: 100%;
+}
+ 
+header {
+    color: white;
+    @include headline-font;
+    @include fontSize(22px);
+    border-bottom-style: dashed;
+    text-align: center;
+}
+
+h1 + p {
+    border-top-style: dashed;
+    @include fontSize(25px); 
+}
+
+h2 {
+    background-color: #533737;
+    color: white;
+    @include headline-font;
+    @include fontSize(25px);
+    margin-top: 50px;
+    margin-bottom: 8px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3, h4, h5, h6 {
+    @include headline-font;
+    line-height: 1;
+}
+
+h4 {
+    border-top-style: solid;
+    padding: 5px;
+   
+}
+
+h5 {
+    text-align: center;
+}
+
+blockquote {
+    background-color: white;
+    @include body-font-bold;
+    @include fontSize(18px);
+    margin-left: 6px;
+    margin-right: 6px; 
+    padding: 4px;
+    text-align: center;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    align-content: center;
+}
+
+footer {
+    background-color: #533737;
+    padding: 15px;
+    border-top-style: groove;
+    border-top-width: thick;
+}
+
+figcaption {
+    text-align: right;
+}
+
+a {
+    @include body-font-bold;
+    color: black;
+}
+
+div {
+    text-align: center;
+}
